@@ -1,5 +1,5 @@
 LexBF is a Brainfuck-C compiler which can compile Brainfuck code into C.
-<LexBF>  Copyright (C) <2012>  <Libertas Wei(horizonvei@gmail.com)>
+<LexBF>  Copyright (C) <2012>  <Libertas Wei>
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
