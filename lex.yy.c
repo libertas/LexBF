@@ -501,10 +501,20 @@ char *yytext_ptr;
 #line 1 "LexBF.l"
 #line 2 "LexBF.l"
 #include <stdio.h>
-#define LENGTH 100000
-char c_code[LENGTH]="#include <stdio.h>\n#include<stdlib.h>\n#define LENGTH 30000\nint main(){\nchar *tape;\nint pc=0;\ntape=malloc(LENGTH);\n";
+#define CODE_LENGTH 100000
+
 FILE *output_file;
-#line 508 "lex.yy.c"
+
+char c_code[CODE_LENGTH]="
+#include <stdio.h>
+#include<stdlib.h>
+#define LENGTH 30000
+int main()
+{
+char *tape;
+int pc=0;
+tape=malloc(LENGTH);";
+#line 518 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -686,9 +696,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 8 "LexBF.l"
+#line 18 "LexBF.l"
 
-#line 692 "lex.yy.c"
+#line 702 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -792,55 +802,55 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 9 "LexBF.l"
+#line 19 "LexBF.l"
 strcat(c_code,"tape[pc]++;\n");
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "LexBF.l"
+#line 20 "LexBF.l"
 strcat(c_code,"tape[pc]--;\n");
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "LexBF.l"
+#line 21 "LexBF.l"
 strcat(c_code,"pc++;\n");
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "LexBF.l"
+#line 22 "LexBF.l"
 strcat(c_code,"pc--;\n");
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 13 "LexBF.l"
+#line 23 "LexBF.l"
 strcat(c_code,"scanf(\"%c\",&tape+pc);\n");
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 14 "LexBF.l"
+#line 24 "LexBF.l"
 strcat(c_code,"printf(\"%c\",tape[pc]);\n");
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 15 "LexBF.l"
+#line 25 "LexBF.l"
 strcat(c_code,"while (tape[pc]){\n");
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 16 "LexBF.l"
+#line 26 "LexBF.l"
 strcat(c_code,"}\n");
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 17 "LexBF.l"
+#line 27 "LexBF.l"
 ;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 18 "LexBF.l"
+#line 28 "LexBF.l"
 ECHO;
 	YY_BREAK
-#line 844 "lex.yy.c"
+#line 854 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1824,7 +1834,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 18 "LexBF.l"
+#line 28 "LexBF.l"
 
 
 
