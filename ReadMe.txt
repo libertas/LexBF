@@ -1,0 +1,9 @@
+This is a free software.(GPL V3)
+It's used to compiler Brainfuck codes into C.
+You can use it like this:
+
+[X@XX XXX]$make
+lex LexBF.l
+cc lex.yy.c
+[X@XX XXX]$./LexBF <BRAINFUCK.b OUTPUT.c
+[X@XX XXX]$cc OUTPUT.c -o OUTPUT
