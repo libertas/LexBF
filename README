@@ -4,6 +4,6 @@ You can use it like this:
 
 [X@XX XXX]$make
 lex LexBF.l
-cc lex.yy.c
+cc lex.yy.c -o LexBF
 [X@XX XXX]$./LexBF <BRAINFUCK.b OUTPUT.c
 [X@XX XXX]$cc OUTPUT.c -o OUTPUT
