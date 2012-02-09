@@ -15,18 +15,13 @@ FILE *output_file;
 \[ strcat(c_code,"while (tape[pc]){\n");
 \] strcat(c_code,"}\n");
 .  ;
+[\n] ;
 %%
 
-int main(int argc,char *argv[])
+int main()
 {
 	yylex();
 	strcat(c_code,"free(tape);\nreturn 0;\n}\n");
-	if (argv[1])
-	{
-		output_file=fopen(argv[1],"wr");
-		fputs(c_code,output_file);
-		fclose(output_file);
-	}
 	printf("%s\n",c_code);
 	return 0;
 }
