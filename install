@@ -1,0 +1,3 @@
+#! /bin/sh
+make
+sudo cp ./LexBF-i686-Linux /usr/local/bin/LexBF
