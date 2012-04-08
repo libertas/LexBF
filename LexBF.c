@@ -1,5 +1,6 @@
+#line 2 "LexBF.c"
 
-#line 3 "lex.yy.c"
+#line 4 "LexBF.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -504,7 +505,7 @@ char *yytext_ptr;
 #define LENGTH 0xffffff
 char c_code[LENGTH]="#include <stdio.h>\n#include<stdlib.h>\n#define LENGTH 30000\nint main(){\nchar *tape;\nint pc=0;\ntape=malloc(LENGTH);\n";
 FILE *output_file;
-#line 508 "lex.yy.c"
+#line 509 "LexBF.c"
 
 #define INITIAL 0
 
@@ -688,7 +689,7 @@ YY_DECL
     
 #line 8 "LexBF.l"
 
-#line 692 "lex.yy.c"
+#line 693 "LexBF.c"
 
 	if ( !(yy_init) )
 		{
@@ -846,7 +847,7 @@ YY_RULE_SETUP
 #line 19 "LexBF.l"
 ECHO;
 	YY_BREAK
-#line 850 "lex.yy.c"
+#line 851 "LexBF.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
