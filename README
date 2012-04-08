@@ -1,5 +1,6 @@
 This is a free software.(GPL V3)
 It's used to compiler Brainfuck codes into C.
+I think the C compiler CLANG might help this software run faster!!
 You can use it like this:
 
 [X@XX XXX]$make
