@@ -503,7 +503,7 @@ char *yytext_ptr;
 #line 2 "LexBF.l"
 #include <stdio.h>
 #define LENGTH 0xffffff
-char c_code[LENGTH]="#include <stdio.h>\n#include<stdlib.h>\n#define LENGTH 30000\nint main(){\nchar *tape;\nint pc=0;\ntape=malloc(LENGTH);\n";
+char c_code[LENGTH]="#include <stdio.h>\n#include<stdlib.h>\n#define LENGTH 30000\nint main(){\nchar *tape;\nint pc=0;\ntape=malloc(LENGTH);\nint c;";
 FILE *output_file;
 #line 509 "LexBF.c"
 
@@ -814,7 +814,7 @@ strcat(c_code,"pc--;\n");
 case 5:
 YY_RULE_SETUP
 #line 13 "LexBF.l"
-strcat(c_code,"tape[pc]=getchar();\n");
+strcat(c_code,"c=getchar();if(c>=0)tape[pc]=c;\n");
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
