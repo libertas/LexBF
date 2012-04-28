@@ -1,11 +1,18 @@
-cc=gcc
+CC=gcc
+
+
+all:LexBF LexBF.c awib
 
 awib:LexBF awib.b
 	./LexBF <awib.b >awib.c
-	$(cc) awib.c -o awib -O2
+	$(CC) awib.c -o awib -O2
 
-LexBF:lex.yy.c
-	$(cc) LexBF.c -o LexBF -O3
+LexBF:LexBF.c
+	$(CC) LexBF.c -o LexBF -O3
 
-lex.yy.c:LexBF.l
+LexBF.c:LexBF.l
 	lex -o LexBF.c LexBF.l
+
+
+clean:
+	rm awib awib.c LexBF LexBF.c
