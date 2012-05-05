@@ -1,5 +1,6 @@
 CC=gcc
-
+INSTALL=/usr/local/bin/LexBF
+LINK=/usr/local/bin/bf
 
 all:LexBF LexBF.c awib
 
@@ -15,10 +16,10 @@ LexBF.c:LexBF.l
 
 
 install:LexBF
-	sudo cp ./LexBF /usr/local/bin/LexBF;ln -s /usr/local/bin/LexBF /usr/local/bin/bf
+	sudo cp ./LexBF $(INSTALL);ln -s $(INSTALL) $(LINK)
 
-remove:/usr/local/bin/LexBF
-	sudo rm /usr/local/bin/LexBF /usr/local/bin/bf
+remove:$(INSTALL)
+	sudo rm $(INSTALL) $(LINK)
 
 clean:
 	rm awib awib.c LexBF LexBF.c
