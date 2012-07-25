@@ -16,7 +16,7 @@ LexBF.c:LexBF.l
 
 
 install:LexBF
-	sudo cp ./LexBF $(INSTALL);ln -s $(INSTALL) $(LINK)
+	sudo cp ./LexBF $(INSTALL);sudo ln -s $(INSTALL) $(LINK)
 
 remove:$(INSTALL)
 	sudo rm $(INSTALL) $(LINK)
