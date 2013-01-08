@@ -23,4 +23,4 @@ remove:/usr/local/bin/lexbf
 	sudo rm /usr/local/bin/lexbf /usr/local/bin/bf
 
 clean:
-	rm awib awib.c LexBF LexBF.c
+	rm awib awib.c lexbf LexBF.c
