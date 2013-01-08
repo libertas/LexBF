@@ -3,7 +3,7 @@ CFLAGS=-O2
 
 all:lexbf LexBF.c awib
 
-awib:LexBF awib.b
+awib:lexbf awib.b
 	./lexbf <awib.b >awib.c
 	$(CC) awib.c -o awib $(CFLAGS)
 
@@ -14,7 +14,7 @@ LexBF.c:LexBF.l
 	lex -o LexBF.c LexBF.l
 
 
-install:LexBF
+install:lexbf
 	sudo cp ./lexbf /usr/local/bin/lexbf
 	sudo ln -s /usr/local/bin/lexbf /usr/local/bin/bf
 	
