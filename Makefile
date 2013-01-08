@@ -6,7 +6,7 @@ awib:LexBF awib.b
 	./lexbf <awib.b >awib.c
 	$(CC) awib.c -o awib -O2
 
-LexBF:LexBF.c
+lexbf:LexBF.c
 	$(CC) LexBF.c -o lexbf -O2
 
 LexBF.c:LexBF.l
