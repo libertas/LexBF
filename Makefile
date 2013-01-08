@@ -1,13 +1,14 @@
 CC=cc
+CFLAGS=-O2
 
 all:lexbf LexBF.c awib
 
 awib:LexBF awib.b
 	./lexbf <awib.b >awib.c
-	$(CC) awib.c -o awib -O2
+	$(CC) awib.c -o awib $(CFLAGS)
 
 lexbf:LexBF.c
-	$(CC) LexBF.c -o lexbf -O2
+	$(CC) LexBF.c -o lexbf $(CFLAGS)
 
 LexBF.c:LexBF.l
 	lex -o LexBF.c LexBF.l
